@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 10%, 3.9%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 10%, 3.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 10%, 3.9%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(20, 95%, 55%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(215, 40%, 20%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(0, 79%, 57%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(60, 9%, 98%);
+  --ring: hsl(20, 95%, 55%);
+  --radius: 0.5rem;
+  --success: hsl(120, 57%, 51%);
+  --charcoal: hsl(240, 12%, 27%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 4%, 16%);
+  --muted-foreground: hsl(240, 5%, 65%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 4%, 16%);
+  --input: hsl(240, 4%, 16%);
+  --primary: hsl(20, 95%, 55%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(215, 40%, 20%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(0, 79%, 57%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(20, 95%, 55%);
+  --success: hsl(120, 57%, 51%);
+  --charcoal: hsl(240, 12%, 27%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gray-50 font-sans antialiased text-foreground;
+  }
+}
+
+/* Custom styles for Swiggy-like appearance */
+.restaurant-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-2px);
+}
+
+.category-item {
+  transition: transform 0.2s ease-in-out;
+}
+
+.category-item:hover {
+  transform: scale(1.05);
+}
+
+.cart-sidebar {
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.filter-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-button:hover {
+  border-color: hsl(20, 95%, 55%);
+  color: hsl(20, 95%, 55%);
+}
+
+.add-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.add-button:hover {
+  background-color: hsl(20, 90%, 50%);
+}
+
+.menu-item-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-item-card:hover {
+  border-color: hsl(20, 95%, 55%);
+}
+
+/* Animation for cart count badge */
+.cart-count {
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Scrollbar styling */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
